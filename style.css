@@ -1,0 +1,284 @@
+:root{
+    --dark_blue: #363f5f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(241, 241, 241);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 60%;
+    height: 50%px; 
+    margin: auto;
+}
+
+header{
+    background-color: #2D4A22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+
+#balance{
+    margin-top: -11rem;
+    
+}
+
+
+#balance h2{
+    color: white;
+    font-weight: 400;
+}
+
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark_blue); 
+    /*Executando uma função com cor setada na variável
+    dark_blue  */
+}   
+
+.card{
+    
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin: 2rem 0 0 0;
+    color: var(--dark_blue);
+}
+
+.card h3{
+    display: flex; /*Para posicionar um elemento ao lado do outro*/
+    justify-content:space-between; /**/
+    align-items: center; /*Alinhar os elementos no eixo x*/
+    font-weight: normal; 
+    font-size: 1rem;
+}
+
+.delete{
+    text-align: right;
+
+}
+
+.card p{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 2rem;
+}
+
+.card.total{
+    background: #49AA26;
+    color: white;
+}
+
+
+/*=========== Links e botões ==============*/
+
+.link{
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    color: rgb(45, 194, 15);
+}
+
+.link:hover{
+    color: rgb(64, 252, 39);
+}
+
+button{
+    
+    height: 50px;
+    width: 48%;
+    border: none;
+    color: white;
+    background-color: #49AA26;
+    
+    border-radius: 0.15rem;
+    cursor: pointer;
+    display: inline-block;
+}
+button:hover{
+    background-color: #3dd705;
+}
+
+.botão.cancel{
+    text-decoration: none;
+    color: red;
+    border: red solid 2px;
+    border-radius: 0.25rem;
+    height: 50px;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+
+.botão.cancel:hover{
+    opacity: 1;
+}
+/*===========================================*/
+
+
+#data-table{
+    width:100%;
+    border-spacing:0 0.5rem;
+}
+
+table tbody tr{
+    opacity: 0.7;
+}
+
+table tr:hover{
+opacity: 2;
+}
+
+table th{
+    background: rgba(255, 255, 255, 0.822);
+    font-weight: normal;
+    text-align: left;
+    padding: 1rem 2rem;
+    color: #969cb3;
+}
+
+table thead tr th:first-child{ /* Serve para estilizar o primeiro td da tr*/
+    border-top-left-radius:  0.25rem; /*Ajustando borda esquerda superior*/
+    border-bottom-left-radius: 0.25rem;/*Ajustando borda esquerda inferior*/
+}
+table thead tr th:last-child{ /*Serve para pegar o ultimo th na tr*/
+    border-top-right-radius:  0.25rem; 
+    border-bottom-right-radius: 0.25rem;
+}
+
+table td{
+    background: white;
+    padding: 1rem 2rem; 
+}
+
+table tbody tr td:first-child{/*Serve para pegar o primeiro td na tr*/
+    border-top-left-radius:  0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+table tbody tr td:last-child{/*Serve para pegar o ultimo td na tr*/
+    border-top-right-radius:  0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+td.description{
+    color: var(--dark_blue);
+}
+td.income{
+    color: #12a454;
+}
+td.expense{
+    color:#e92929
+}
+
+
+/*=========Criando um modal==========*/
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0; /*a tela fica invisível*/
+    visibility: hidden; /*Some com o container*/
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal{
+    background-color: #F0F2f5;
+    padding: 2.4rem;
+    width: 50%;
+}
+
+/*======== Estilizando o form =========*/
+
+#form{
+    max-width: 600px;
+
+}
+#form h2{
+    margin-top: 0;
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 0.2rem;
+    
+}
+
+input{
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width:100%;
+}
+
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small{
+    opacity: 0.5;
+}
+
+.input-group.actions{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .botão,
+.input-group.actions button{
+
+}
+
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark_blue);
+    opacity: 0.6;
+}
+
+
+/* ========= RESPONSIVIDADE ========= */
+
+@media (min-width:1019px) {
+
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+
+@media(max-width:700px){
+   
+    #data-table{
+    display: block;
+    overflow-x:auto;
+    }
+}
