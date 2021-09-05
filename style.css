@@ -251,14 +251,13 @@ input{
 }
 
 footer{
+     margin-top:200px;
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--dark_blue);
     opacity: 0.6;
 }
-footer p{
- margin-top:200px;
-}
+
 
 /* ========= RESPONSIVIDADE ========= */
 
